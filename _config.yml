@@ -5,23 +5,20 @@ title: SYS_0xA7
 tagline: Everything You Need About Computers and Software
 description: "Daily Technology Blogs - Sys_0xA7"
 url: "https://sys0xa7.github.io"
+baseurl: ""  # GitHub Pages user site olduğu için boş bırakılmalı ✅
 
 github:
-  username: WolfGames156
-
-twitter:
-  username: ""
+  username: Sys0xA7  # repo sahibinle eşleşmeli
 
 social:
   name: Sys_0xA7
   email: ktme156@gmail.com
   links:
-    - https://github.com/WolfGames156
+    - https://github.com/Sys0xA7
 
 webmaster_verifications:
   google: ""
   bing: ""
-  alexa: ""
   yandex: ""
   baidu: ""
   facebook: ""
@@ -29,23 +26,11 @@ webmaster_verifications:
 analytics:
   google:
     id: "G-3SSW13573G"
-  goatcounter:
-    id: ""
-  umami:
-    id: ""
-    domain: ""
-  matomo:
-    id: ""
-    domain: ""
-  cloudflare:
-    id: ""
-  fathom:
-    id: ""
 
 pageviews:
   provider: ""
 
-theme_mode: ""
+theme_mode: auto  # sistem temasına göre otomatik
 
 cdn: ""
 
@@ -67,6 +52,7 @@ comments:
     input_position: "bottom"
     lang: "tr"
     reactions_enabled: 1
+
 assets:
   self_host:
     enabled: false
@@ -79,7 +65,6 @@ pwa:
     deny_paths: []
 
 paginate: 10
-baseurl: ""
 
 kramdown:
   footnote_backlink: "&#8617;&#xfe0e;"
@@ -148,3 +133,8 @@ jekyll-archives:
   permalinks:
     tag: /tags/:name/
     category: /categories/:name/
+
+plugins:
+  - jekyll-sitemap  # 🔥 Sitemap üretimi için gerekli
+  - jekyll-feed     # RSS feed desteği (SEO için)
+  - jekyll-seo-tag  # SEO meta etiketleri
