@@ -56,23 +56,17 @@ social_preview_image: ""
 toc: true
 
 comments:
-  provider: ""
-  disqus:
-    shortname: ""
-  utterances:
-    repo: ""
-    issue_term: ""
+  provider: giscus
   giscus:
-    repo: ""
-    repo_id: ""
-    category: ""
-    category_id: ""
+    repo: "Sys0xA7/sys0xa7.github.io"
+    repo_id: "R_kgDOQF8bdg"
+    category: "General"
+    category_id: "DIC_kwDOQF8bds4Cw3t1"
     mapping: "pathname"
     strict: 0
     input_position: "bottom"
-    lang: "en"
+    lang: "tr"
     reactions_enabled: 1
-
 assets:
   self_host:
     enabled: false
