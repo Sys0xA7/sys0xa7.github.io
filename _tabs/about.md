@@ -2,6 +2,7 @@
 layout: page
 title: About Sys_0xA7
 permalink: /about/
+order: 4
 ---
 
 
