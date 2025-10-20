@@ -4,7 +4,6 @@ title: About Sys_0xA7
 permalink: /about/
 ---
 
-# About Sys_0xA7
 
 Hello! I’m a passionate software developer skilled in HTML, CSS, JavaScript, C++, C#, and Python. I build websites, explore new technologies, and love sharing what I learn.
 
