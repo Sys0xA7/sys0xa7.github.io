@@ -7,8 +7,15 @@ description: "Daily Technology Blogs - Sys_0xA7"
 url: "https://sys0xa7.github.io"
 baseurl: ""  # GitHub Pages user site olduğu için boş bırakılmalı ✅
 
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      sitemap: true
 github:
   username: Sys0xA7  # repo sahibinle eşleşmeli
+
 
 social:
   name: Sys_0xA7
