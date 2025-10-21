@@ -1,0 +1,62 @@
+---
+layout: null
+permalink: /sitemap.xml
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 
+                      http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+  <!-- Ana sayfa -->
+  <url>
+    <loc>{{ site.url }}{{ site.baseurl }}/</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Yazılar -->
+  {% for post in site.posts %}
+  <url>
+    <loc>{{ site.url }}{{ post.url }}</loc>
+    <lastmod>{{ post.last_modified_at | default: post.date | date_to_xmlschema }}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  {% endfor %}
+
+  <!-- Sayfalar -->
+  {% for page in site.pages %}
+    {% if page.sitemap != false and page.url != '/404.html' and page.url != '/robots.txt' and page.url != '/sitemap.xml' %}
+      <url>
+        <loc>{{ site.url }}{{ page.url }}</loc>
+        <lastmod>{{ page.last_modified_at | default: site.time | date_to_xmlschema }}</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+      </url>
+    {% endif %}
+  {% endfor %}
+
+  <!-- Kategoriler -->
+  {% for category in site.categories %}
+    <url>
+      <loc>{{ site.url }}/categories/{{ category[0] | slugify }}/</loc>
+      <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.6</priority>
+    </url>
+  {% endfor %}
+
+  <!-- Etiketler -->
+  {% for tag in site.tags %}
+    <url>
+      <loc>{{ site.url }}/tags/{{ tag[0] | slugify }}/</loc>
+      <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.5</priority>
+    </url>
+  {% endfor %}
+
+</urlset>
